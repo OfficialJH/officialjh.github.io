@@ -10,54 +10,105 @@
 
     <style>
         :root {
-          --text: #000;
-          --bg: #f2f2f2;
-          --link: #ff5555;
-          --hover: #ffaaaa;
-          }
-    
-          body {
+            --text: #fff;
+            --bg: #222;
+            --bg2: #333;
+        }
+
+        body {
             background-color: var(--bg);
             color: var(--text);
             font-family: "Courier New", Courier, monospace;
             text-align: center;
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-          }
+            align-items: center;
+        }
     
-          @media (prefers-color-scheme: dark) {
-            :root {
-              --text: #fff;
-              --bg: #222222;
-            }
-          }
-    
-          a {
-            color: var(--link);
-            text-decoration: none;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-          }
-    
-          a:hover {
-            color: var(--hover);
-            text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
-          }
+        a { text-decoration: none }
+
+        button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: none;
+            border: none;
+            color: var(--text);
+            width: 96px;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        button > img { width: 48px }
+
+        .btn-box {
+            display: flex;
+            flex-direction: column;
+            padding: 4px;
+            margin-bottom: 16px;
+            background: var(--bg2);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+        }
+
+        .btn-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 8px;
+            gap: 16px;
+        }
+
     </style>
 </head>
 
 <body>
-    <div>
-        <h1>OfficialJH's Page</h1>
-        <h3>Hey I'm OfficialJH, I do stuff sometimes</h3>
-        <p>Languages I kinda know: Python, HTML, a third one I can't remember</p><br>
-        <a href="/habit-tracker/" title="Track them habits">Habit Tracker</a><br><br>
-        <a href="/iptv-player/" title="Watch IPTV streams online">IPTV Player</a><br><br>
-        <a href="/mkt-shop-explorer/" title="For the 5 people that still play this game">Mario Kart Tour Shop Explorer</a><br><br>
-        <a href="https://github.com/OfficialJH" target="_blank" title="My code stinks, please don't look">Github</a><br><br>
-        <a href="https://discordapp.com/users/552603874498969602" target="_blank" title="I don't have a server, it's just my profile">Discord</a>
+    <img src="./icons/main.png" style="margin-top:16px;">
+    <h1>OfficialJH's Page</h1>
+    <h3>I do stuff sometimes</h3>
+
+    <div class="btn-box">
+        <div class="btn-row">
+            <a href="./habit-tracker/">
+                <button title="Track them habits">
+                    <img src="./icons/habit.png">
+                    <span>Habit Tracker</span>
+                </button>
+            </a>
+
+            <a href="./iptv-player/">
+                <button title="Watch IPTV streams online">
+                    <img src="./icons/iptv.png">
+                    <span>IPTV Player</span>
+                </button>
+            </a>
+
+            <a href="./mkt-shop-explorer/">
+                <button title="For the 5 people that still play this game">
+                    <img src="./icons/mkt-shop.png">
+                    <span>MKT Shop Explorer</span>
+                </button>
+            </a>
+        </div>
+
+        <div class="btn-row">
+            <a href="https://github.com/OfficialJH" target="_blank">
+                <button title="My code stinks, please don't look">
+                    <img src="./icons/github.png">
+                    <span>Github</span>
+                </button>
+            </a>
+
+            <a href="https://discordapp.com/users/552603874498969602" target="_blank">
+                <button title="I don't have a server, it's just my profile">
+                    <img src="./icons/discord.png">
+                    <span>Discord</span>
+                </button>
+            </a>
+        </div>
     </div>
 </body>
 
